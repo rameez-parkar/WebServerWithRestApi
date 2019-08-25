@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>Web Design</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="images/tavisca-logo.jpg" alt="Tavisca Logo" width="20%">
+    </div>
+
+    <div class="middle">
+      <ul>
+        <li><a href="todo.html">To Do</a></li>
+        <li><a href="user.html">User</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="content">
+        <h1 style="font-family:sans-serif; margin-left: 5%">User Profile</h1>
+        <fieldset>
+          <legend><b>User Profile</b></legend>
+          <center>
+          <img src="images/profilepic.jpg" alt="Profile Pic" width="20%" position="relative">
+          </center>
+          <form onsubmit="Validation(this,event)" id='frmid' method="get">
+          <table>
+            <tr>
+              <td>Name </td>
+              <td><input type="text" id="name" class="textbox" onclick="Reset(this)"></td>
+            </tr>
+            <tr>
+              <td>Gender </td>
+              <td><input type="radio" name="gender"> Male
+                  <br>
+                  <input type="radio" name="gender"> Female
+              </td>
+            </tr>
+            <tr>
+              <td>Date of Birth </td>
+              <td><input type="date" id="dob" name="dob" class="textbox" onclick="Reset(this)"></td>
+            </tr>
+            <tr>
+              <td>Contact Number </td>
+              <td><input type="text" id="contact" class="textbox" onclick="Reset(this)"></td>
+            </tr>
+            <tr>
+              <td>Email Id </td>
+              <td><input type="email" id="email" class="textbox" onclick="Reset(this)"></td>
+            </tr>
+          </table>
+          <center><input type="submit" name="submit" class="submit"></center>
+        </form>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="footer">
+      <nav>
+        <a class="footerref" href="home.html">Home</a> |
+        <a class="footerref" href="about.html">About Us</a> |
+        <a class="footerref" href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </body>
+</html>

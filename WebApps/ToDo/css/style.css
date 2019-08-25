@@ -1,0 +1,181 @@
+.header{
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  padding: 0;
+  background-color: #18185a;
+  position: relative;
+}
+.middle{
+  height: 65%;
+  margin: 0;
+  overflow-y: scroll;
+}
+.footer{
+  width: 100%;
+  height: 5%;
+  background-color: #18185a;
+  text-align: center;
+  color: white;
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+}
+.content{
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  margin-left: 20%;
+  padding: 4;
+  color: black;
+  align-content: center;
+}
+
+p{
+  font-family: sans-serif;
+  font-size: 120%;
+}
+
+table{
+  font-family: sans-serif;
+  font-size: 120%;
+  border-collapse: collapse;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td{
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even){
+  background-color: #eeeeee;
+}
+
+tr:nth-child(odd){
+  background-color: #ffffff;
+}
+
+a.footerref{
+  color: white;
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+fieldset{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  overflow-y: auto;
+}
+
+.textbox{
+  width: 70%;
+  padding: 1%;
+  font-size: 120%;
+}
+
+button, input.submit{
+  padding: 12px 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+
+.delete{
+  background-color: #f44336;
+  color: white;
+}
+
+.delete:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+}
+
+.update{
+  background-color: #4CAF50;
+  color: white;
+}
+
+.update:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.add{
+  background-color: #008CBA;
+  color: white;
+}
+.add:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.fetch{
+  background-color: black;
+  color: white;
+}
+.fetch:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.submit{
+  background-color: #008CBA;
+  color: white;
+}
+.submit:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.login{
+  background-color: #008CBA;
+  color: white;
+}
+.login:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  width: 20%;
+  height: 100%;
+  padding: 0;
+  background-color: #18185a;
+  position: absolute;
+  overflow: auto;
+  font-size: 150%;
+  font-family: sans-serif;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(:active) {
+  background-color: white;
+  color: black;
+}
+
+li a:active{
+  background-color: white;
+  color: black;
+}
