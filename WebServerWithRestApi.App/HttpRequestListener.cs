@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WebServerWithRestApi.App
@@ -9,6 +10,7 @@ namespace WebServerWithRestApi.App
     {
         private Socket _socket;
         private IPEndPoint _endPoint;
+        private Dispatcher _dispatcher;
         private int port = 9090;
         public void ListenForConnections()
         {
@@ -19,20 +21,20 @@ namespace WebServerWithRestApi.App
             Console.WriteLine("Listening for connection...");
         }
 
-        public Socket AcceptConnection()
+        public void AcceptConnection()
         {
             try
             {
-                Task<Socket> socket = Task.Run(() =>
+                new Thread(() =>
                 {
                     while (true)
                     {
                         Socket senderSocket = _socket.Accept();
                         Console.WriteLine("Connection established...");
-                        return senderSocket;
+                        _dispatcher = new Dispatcher();
+                        _dispatcher.Dispatch(senderSocket);
                     }
-                });
-                return socket.GetAwaiter().GetResult();
+                }).Start();
             }
             catch (Exception)
             {
